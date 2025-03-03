@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedTab: BottomTabs = .account
+    @State var selectedTab: BottomTabs = .list
     
     var body: some View {
         NavigationView {
@@ -27,6 +27,7 @@ struct ContentView: View {
                         Text("Item")
                     }
                 }
+                .padding(.bottom, 60)
               
                 BottomBar(selectedTab: $selectedTab)
             }

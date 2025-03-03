@@ -19,9 +19,8 @@ struct BottomBar: View {
             VStack {
                 Spacer()
                 BottomBarContent(selectedTab: $selectedTab)
-                    .padding(.top, 15)
                     .frame(width: geometry.size.width)
-                    .background(Color(.systemBackground))
+               
             }
         }
     }
@@ -45,8 +44,10 @@ private struct BottomBarContent: View {
             BottomBarButton(image: "cart.fill", text: "Item", tab: .item)
         }
         .frame(maxWidth: .infinity)
+        .frame(height: 35)
         .padding(.horizontal, 5)
-        .frame(height: 50)
+        .padding(.top, 20)
+        .background(Color(.systemBackground))
     }
     
     private func BottomBarButton(
@@ -76,4 +77,8 @@ private struct BottomBarContent: View {
 
 #Preview {
     BottomBar(selectedTab: .constant(.account))
+}
+
+#Preview {
+    ContentView()
 }

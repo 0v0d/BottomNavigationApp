@@ -22,6 +22,6 @@ struct ButtonFAB: View {
                 .font(.title)
                 .foregroundColor(.white)
         }
-        .offset(y: -40)
+        .offset(y: -30)
     }
 }
